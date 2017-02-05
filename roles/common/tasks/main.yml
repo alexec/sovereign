@@ -26,7 +26,6 @@
     - htop
     - iftop
     - iotop
-    - molly-guard
     - python-software-properties
     - ruby
     - screen
@@ -36,6 +35,10 @@
     - zsh
   tags:
     - dependencies
+
+- name: Install Molly Guard
+  apt: pkg=molly-guard
+  when: molly_guard_enabled
 
 - name: Install mosh
   apt: pkg=mosh
